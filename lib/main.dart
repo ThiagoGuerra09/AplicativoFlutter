@@ -47,10 +47,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-
-  load() async{
-    
-  }
+  load() async {}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,10 +101,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-//  Container(
-//   child: Center(
-//     child: Text(
-//       'ola mundo',
-//     ),
-//   ),
-// ),
