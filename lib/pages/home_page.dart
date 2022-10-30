@@ -37,7 +37,6 @@ class _HomePageState extends State<HomePage> {
     var prefs = await SharedPreferences.getInstance();
     var data = prefs.getString('data');
 
-    // if (data != null) {
     Iterable decoded = jsonDecode(data);
     List<Item> result = decoded.map((x) => Item.fromJson(x)).toList();
     setState(() {
