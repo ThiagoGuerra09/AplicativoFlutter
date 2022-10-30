@@ -1,5 +1,7 @@
-import 'package:flutter/material.dart';
+import 'dart:convert';
 
+import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'models/item.dart';
 
 void main() {
@@ -38,16 +40,37 @@ class _HomePageState extends State<HomePage> {
         ),
       ); // adiciona novos itens
       newTaskCtrl.text = "";
+      save();
     });
   }
 
   void remove(int index) {
     setState(() {
       items.removeAt(index);
+      save();
     });
   }
 
-  load() async {}
+  Future load() async {
+    var prefs = await SharedPreferences.getInstance();
+    var data = prefs.getString('data');
+
+    // if (data != null) {
+    Iterable decoded = jsonDecode(data);
+    List<Item> result = decoded.map((x) => Item.fromJson(x)).toList();
+    setState(() {
+      items = result;
+    });
+  }
+
+  save() async {
+    var prefs = await SharedPreferences.getInstance();
+    await prefs.setString('data', jsonEncode(items));
+  }
+
+  _HomePageState() {
+    load();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,6 +106,7 @@ class _HomePageState extends State<HomePage> {
                 setState(() {
                   // função do stf que muda o estado dos parametros passados, serve para quando vamos atualizar uma posição
                   item.done = value;
+                  save();
                 });
               },
             ),
