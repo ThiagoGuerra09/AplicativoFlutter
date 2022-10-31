@@ -11,9 +11,9 @@
 
 - Scaffold: É um componente "template" com vários componententes padrões para a montagem de um aplicativo, como se fosse o HTML.<br>
 
-- Set State é uma função do StateFul, que muda o estado dos parametros passados, serve para quando vamos atualizar uma posição.
+- Set State é uma função do StateFul, que muda o estado dos parametros passados, serve para quando vamos atualizar uma posição.<br>
 
-<b><Entendimentos importantes sobre classes abstratas></b>
+<b><Entendimentos importantes sobre classes abstratas></b><br>
   
  - Abstract: São classes que não podem ser instanciadas, e são criadas para serem herdadas (classes Pai), essas classes irão armazenar atributos e métodos comuns às outras classes(classes Filho) que a irão herdar, permitindo um maior reaproveitamento de código.<br>
 
