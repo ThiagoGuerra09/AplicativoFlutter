@@ -1,19 +1,4 @@
-# app
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
 # Flutter
 
 <b>Componentes importantes </b>
@@ -26,11 +11,15 @@ samples, guidance on mobile development, and a full API reference.
 
 - Scaffold: É um componente "template" com vários componententes padrões para a montagem de um aplicativo, como se fosse o HTML.<br>
 
+- Set State é uma função do StateFul, que muda o estado dos parametros passados, serve para quando vamos atualizar uma posição.
+
+<b><Entendimentos importantes sobre classes abstratas></b>
+  
+ - Abstract: São classes que não podem ser instanciadas, e são criadas para serem herdadas (classes Pai), essas classes irão armazenar atributos e métodos comuns às outras classes(classes Filho) que a irão herdar, permitindo um maior reaproveitamento de código.<br>
+
+- Extends: A extends é usada quando queremos criar uma classe filha que herde as caracteristicas da classe pai.<br>
 <b>Especificação do Aplicativo </b><br>
-Nesta atividade iremos criar um aplicativo para Android para divisão de pagamento de conta em um bar. 
-O aplicativo deve permitir que o usuário informa o valor total da conta e a quantidade de pessoas que irão dividir a conta. 
-O aplicativo deve também permitir informar qual a porcentagem do valor total da conta deverá ser oferecida ao garçom como comissão pelo serviço. 
-Após a entrada de todos os dados, o aplicativo deve exibir na tela o valor da parte referente ao garçom, o total para cada pessoa e o valor total a pagar (valor total da conta mais a parte do garçom). 
+O aplicativo realiza operações de CRUD, que foram utilizadas para treinamento e os primeiros contatos com Flutter, utilizando boas práticas, code review, e utilização de branchs para controle e organização. O software, apresenta uma lista de componentes que podem ser criadas ou excluidas.
 
 
 #terminei aula 11 e to começando aula 12
